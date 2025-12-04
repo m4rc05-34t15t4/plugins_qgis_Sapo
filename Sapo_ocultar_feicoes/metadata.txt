@@ -1,0 +1,10 @@
+[general]
+name=SAPO - Ocultar Feições
+qgisMinimumVersion=3.24
+version=1.0
+author=Marcos Batista Sgt Topo /13
+email=mbsj2007@hotmail.com
+description=Ocultar feições que sobrepõem da mesma camada.
+about=Plugin Com Ferramentas para apoio a Reambulação e Produção em geoinformação.
+icon=icon.png
+category=Edição
