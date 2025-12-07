@@ -1,0 +1,621 @@
+code,code_name,tabela,filter,foreign_table,tipo_geometria
+1,Poço dágua (1),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+2,Poço artesiano (2),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+3,Olho dágua (3),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+6,Foz marítima (6),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+8,Rocha em água (8),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+9,Cachoeira (9),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+10,Salto (10),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+11,Catarata (11),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+12,Corredeira (12),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+14,Banco de areia fluvial (14),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+15,Banco de areia marítimo (15),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+16,Banco de areia lacustre (16),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+17,Banco de areia cordão arenoso (17),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+18,Recife contiguo (18),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+19,Recife afastado (19),tipo_elemento_hidrografico,NULL,centroide_elemento_hidrografico,p
+1,Fluvial (1),tipo_ilha,NULL,centroide_ilha,p
+2,Marítima (2),tipo_ilha,NULL,centroide_ilha,p
+3,Lacustre (3),tipo_ilha,NULL,centroide_ilha,p
+2,Terra indígena (2),tipo_limite_especial,NULL,centroide_limite_especial,p
+5,Unidade de Conservação (5),tipo_limite_especial,NULL,centroide_limite_especial,p
+24,Área de Proteção Ambiental – APA (24),tipo_limite_especial,NULL,centroide_limite_especial,p
+25,Área de Relevante Interesse Ecológico – ARIE (25),tipo_limite_especial,NULL,centroide_limite_especial,p
+26,Floresta – FLO (26),tipo_limite_especial,NULL,centroide_limite_especial,p
+27,Reserva de Desenvolvimento Sustentável – RDS (27),tipo_limite_especial,NULL,centroide_limite_especial,p
+28,Reserva Extrativista – RESEX (28),tipo_limite_especial,NULL,centroide_limite_especial,p
+29,Reserva de Fauna – REFAU (29),tipo_limite_especial,NULL,centroide_limite_especial,p
+30,Reserva Particular do Patrimônio Natural – RPPN (30),tipo_limite_especial,NULL,centroide_limite_especial,p
+31,Estação Ecológica – ESEC (31),tipo_limite_especial,NULL,centroide_limite_especial,p
+32,Parque – PAR (32),tipo_limite_especial,NULL,centroide_limite_especial,p
+33,Monumento Natural – MONA (33),tipo_limite_especial,NULL,centroide_limite_especial,p
+34,Reserva Biológica – REBIO (34),tipo_limite_especial,NULL,centroide_limite_especial,p
+35,Refúgio de Vida Silvestre – RVS (35),tipo_limite_especial,NULL,centroide_limite_especial,p
+36,Área militar (36),tipo_limite_especial,NULL,centroide_limite_especial,p
+1,Rio (com fluxo) (1),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+2,Canal (com fluxo) (2),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+3,Oceano (sem fluxo) (3),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+4,Baía (sem fluxo) (4),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+5,Enseada (sem fluxo) (5),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+6,Meando Abandonado (sem fluxo) (6),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+7,Lago ou Lagoa (sem fluxo) (7),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+9,Laguna (com fluxo) (9),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+10,Represa/açude com fluxo (10),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+11,Represa/açude sem fluxo (11),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+12,Canal não operacional (sem fluxo) (12),tipo_massa_dagua,NULL,centroide_massa_dagua,p
+150,Cult - Arroz de inundação (150),tipo_veg,Vegetação Cultivada,centroide_vegetacao,p
+194,Cult - Perene (194),tipo_veg,Vegetação Cultivada,centroide_vegetacao,p
+196,Cult - Anual irrigado (196),tipo_veg,Vegetação Cultivada,centroide_vegetacao,p
+197,Cult - Anual não irrigado (197),tipo_veg,Vegetação Cultivada,centroide_vegetacao,p
+201,Mangue (201),tipo_veg,Mangue,centroide_vegetacao,p
+301,Brejo/pântano (301),tipo_veg,Brejo ou pântano,centroide_vegetacao,p
+401,Restinga (401),tipo_veg,Restinga,centroide_vegetacao,p
+501,Campinarana (501),tipo_veg,Campinarana,centroide_vegetacao,p
+601,Floresta densa (601),tipo_veg,Floresta,centroide_vegetacao,p
+602,Floresta esparsa (602),tipo_veg,Floresta,centroide_vegetacao,p
+701,Cerrado/Cerradão (701),tipo_veg,Cerrado/Cerradão,centroide_vegetacao,p
+801,Caatinga (801),tipo_veg,Caatinga,centroide_vegetacao,p
+901,Campo (901),tipo_veg,Campo,centroide_vegetacao,p
+1000,Terreno exposto - desconhecido (1000),tipo_veg,Terreno Exposto,centroide_vegetacao,p
+1001,Terreno exposto - cascalho (1001),tipo_veg,Terreno Exposto,centroide_vegetacao,p
+1002,Terreno exposto - areia (1002),tipo_veg,Terreno Exposto,centroide_vegetacao,p
+1003,Terreno exposto - pedregoso (1003),tipo_veg,Terreno Exposto,centroide_vegetacao,p
+1296,Reflorestamento (1296),tipo_veg,Reflorestamento,centroide_vegetacao,p
+1,Rio (com fluxo) (1),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+2,Canal (com fluxo) (2),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+3,Oceano (sem fluxo) (3),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+4,Baía (sem fluxo) (4),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+5,Enseada (sem fluxo) (5),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+6,Meando Abandonado (sem fluxo) (6),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+7,Lago ou Lagoa (sem fluxo) (7),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+9,Laguna (com fluxo) (9),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+10,Represa/açude com fluxo (10),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+11,Represa/açude sem fluxo (11),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+12,Canal não operacional (sem fluxo) (12),tipo_massa_dagua,NULL,cobter_massa_dagua,a
+150,Cult - Arroz de inundação (150),tipo_veg,Vegetação Cultivada,cobter_vegetacao,a
+194,Cult - Perene (194),tipo_veg,Vegetação Cultivada,cobter_vegetacao,a
+196,Cult - Anual irrigado (196),tipo_veg,Vegetação Cultivada,cobter_vegetacao,a
+197,Cult - Anual não irrigado (197),tipo_veg,Vegetação Cultivada,cobter_vegetacao,a
+201,Mangue (201),tipo_veg,Mangue,cobter_vegetacao,a
+301,Brejo/pântano (301),tipo_veg,Brejo ou pântano,cobter_vegetacao,a
+401,Restinga (401),tipo_veg,Restinga,cobter_vegetacao,a
+501,Campinarana (501),tipo_veg,Campinarana,cobter_vegetacao,a
+601,Floresta densa (601),tipo_veg,Floresta,cobter_vegetacao,a
+602,Floresta esparsa (602),tipo_veg,Floresta,cobter_vegetacao,a
+701,Cerrado/Cerradão (701),tipo_veg,Cerrado/Cerradão,cobter_vegetacao,a
+801,Caatinga (801),tipo_veg,Caatinga,cobter_vegetacao,a
+901,Campo (901),tipo_veg,Campo,cobter_vegetacao,a
+1000,Terreno exposto - desconhecido (1000),tipo_veg,Terreno Exposto,cobter_vegetacao,a
+1001,Terreno exposto - cascalho (1001),tipo_veg,Terreno Exposto,cobter_vegetacao,a
+1002,Terreno exposto - areia (1002),tipo_veg,Terreno Exposto,cobter_vegetacao,a
+1003,Terreno exposto - pedregoso (1003),tipo_veg,Terreno Exposto,cobter_vegetacao,a
+1296,Reflorestamento (1296),tipo_veg,Reflorestamento,cobter_vegetacao,a
+1,Área de propriedade particular (1),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+2,Área habitacional (2),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+3,Área relacionada a dutos (3),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+4,Área relacionada a edificação agropecuária ou extrativismo vegetal ou pesca (4),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+5,Área relacionada a edificação de comércio ou serviços (5),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+6,Área relacinada a edificação de ensino (6),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+7,Área relacionada a edificação de saúde (7),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+8,Área relacionada a edificação industrial (8),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+9,Área relacionada a edificação religiosa (9),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+10,Área relacionada a energia elétrica (10),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+11,Área relacionada a equipamentos de desenvolvimento social (11),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+12,Área relacionada a estação de medição de fenômenos (12),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+13,Área relacionada ao extrativismo mineral (13),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+14,Área relacionada a instalação de abastecimento de água (14),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+15,Área relacionada a instalação de comunicações (15),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+16,Área relacionada a instalação de estrutura de transporte (16),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+17,Área relacionada a instalação de saneamento (17),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+18,Área relacionada ao lazer (18),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+19,Área relacionada a ruinas de valor histórico (19),tipo_area_uso_especifico,NULL,constr_area_uso_especifico,a
+0,Desconhecido (0),tipo_exposicao,NULL,constr_deposito,"p,a"
+3,Fechado (3),tipo_exposicao,NULL,constr_deposito,"a,p"
+4,Coberto (4),tipo_exposicao,NULL,constr_deposito,"a,p"
+5,Céu aberto (5),tipo_exposicao,NULL,constr_deposito,"p,a"
+97,Não aplicável (97),tipo_exposicao,NULL,constr_deposito,"p,a"
+101,Geral - Cisterna (101),tipo_deposito,Depósito geral,constr_deposito,"a,p"
+108,Geral - Galpão (108),tipo_deposito,Depósito geral,constr_deposito,"p,a"
+109,Geral - Silo (109),tipo_deposito,Depósito geral,constr_deposito,"a,p"
+110,Geral - Composteira (110),tipo_deposito,Depósito geral,constr_deposito,"p,a"
+111,Geral - Depósito frigorífico (111),tipo_deposito,Depósito geral,constr_deposito,"a,p"
+112,Geral - Barracão industrial (112),tipo_deposito,Depósito geral,constr_deposito,"a,p"
+113,Geral - Reservatório (113),tipo_deposito,Depósito geral,constr_deposito,"a,p"
+132,Geral - Armazém (132),tipo_deposito,Depósito geral,constr_deposito,"p,a"
+198,Geral - Outros (198),tipo_deposito,Depósito geral,constr_deposito,"p,a"
+201,Abast água - Tanque de água (201),tipo_deposito,Depósito de abastecimento de água,constr_deposito,"a,p"
+202,Abast água - Caixa de água (202),tipo_deposito,Depósito de abastecimento de água,constr_deposito,"p,a"
+203,Abast água - Cisterna (203),tipo_deposito,Depósito de abastecimento de água,constr_deposito,"p,a"
+204,Abast água - Reservatório (204),tipo_deposito,Depósito de abastecimento de água,constr_deposito,"a,p"
+298,Abast água - Outros (298),tipo_deposito,Depósito de abastecimento de água,constr_deposito,"a,p"
+301,San - Tanque de saneamento (301),tipo_deposito,Depósito de saneamento,constr_deposito,"a,p"
+304,San - Depósito de lixo (304),tipo_deposito,Depósito de saneamento,constr_deposito,"a,p"
+305,San - Aterro sanitário (305),tipo_deposito,Depósito de saneamento,constr_deposito,"a,p"
+306,San - Aterro controlado (306),tipo_deposito,Depósito de saneamento,constr_deposito,"p,a"
+398,San - Outros (398),tipo_deposito,Depósito de saneamento,constr_deposito,"a,p"
+0,Edificação genérica (0),tipo_edificacao,Edificação genérica,constr_edificacao,"p,a"
+0,casa,tipo_edificacao,Edificação genérica,constr_edificacao,p
+3,Edif. Flutuante / Palafita (3),tipo_edificacao,Edificação genérica,constr_edificacao,"a,p"
+101,Com - Centro de operações de comunicação (101),tipo_edificacao,Edificação de comunicação,constr_edificacao,"a,p"
+102,Com - Central de comutação e transmissão (102),tipo_edificacao,Edificação de comunicação,constr_edificacao,"p,a"
+103,Com - Estação rádio-base (103),tipo_edificacao,Edificação de comunicação,constr_edificacao,"a,p"
+104,Com - Estação repetidora (104),tipo_edificacao,Edificação de comunicação,constr_edificacao,"p,a"
+105,Com - Administrativo (105),tipo_edificacao,Edificação de comunicação,constr_edificacao,"a,p"
+201,Edificação de energia (201),tipo_edificacao,Edificação de energia,constr_edificacao,"a,p"
+301,Abast - Edificação de captação de água (301),tipo_edificacao,Edificação de abastecimento de água,constr_edificacao,"p,a"
+302,Abast - Edificação de tratamento de água (302),tipo_edificacao,Edificação de abastecimento de água,constr_edificacao,"p,a"
+303,Abast - Edificação de recalque de água (303),tipo_edificacao,Edificação de abastecimento de água,constr_edificacao,"p,a"
+304,Abast - Administrativa (304),tipo_edificacao,Edificação de abastecimento de água,constr_edificacao,"p,a"
+395,Abast - Mista (395),tipo_edificacao,Edificação de abastecimento de água,constr_edificacao,"p,a"
+398,Abast - Outros (398),tipo_edificacao,Edificação de abastecimento de água,constr_edificacao,"p,a"
+403,Saneam - Edificação de recalque de resíduos (403),tipo_edificacao,Edificação de saneamento,constr_edificacao,"p,a"
+405,Saneam - Edificação de tratamento de esgoto (405),tipo_edificacao,Edificação de saneamento,constr_edificacao,"a,p"
+406,Saneam - Usina de reciclagem (406),tipo_edificacao,Edificação de saneamento,constr_edificacao,"a,p"
+407,Saneam - Incinerador de resíduos (407),tipo_edificacao,Edificação de saneamento,constr_edificacao,"p,a"
+408,Saneam - Administração (408),tipo_edificacao,Edificação de saneamento,constr_edificacao,"p,a"
+498,Saneam - Outros (498),tipo_edificacao,Edificação de saneamento,constr_edificacao,"a,p"
+516,Ens - Edificação de educação infantil – creche (516),tipo_edificacao,Edificação de ensino,constr_edificacao,"p,a"
+517,Ens - Edificação de educação infantil - pré-escola (517),tipo_edificacao,Edificação de ensino,constr_edificacao,"a,p"
+518,Ens - Edificação de ensino fundamental (518),tipo_edificacao,Edificação de ensino,constr_edificacao,"p,a"
+519,Ens - Edificação de ensino médio (519),tipo_edificacao,Edificação de ensino,constr_edificacao,"a,p"
+520,Ens - Edificação de educação superior – Graduação (520),tipo_edificacao,Edificação de ensino,constr_edificacao,"a,p"
+521,Ens - Edificação de educação superior – graduação e pós-graduação (521),tipo_edificacao,Edificação de ensino,constr_edificacao,"a,p"
+522,Ens - Edificação de educação superior – pós-graduação e extensão (522),tipo_edificacao,Edificação de ensino,constr_edificacao,"p,a"
+523,Ens - Edificação de educação professional de nível técnico (523),tipo_edificacao,Edificação de ensino,constr_edificacao,"p,a"
+524,Ens - Edificação de educação profissional de nível tecnológico (524),tipo_edificacao,Edificação de ensino,constr_edificacao,"p,a"
+525,Ens - Outras atividades de ensino (525),tipo_edificacao,Edificação de ensino,constr_edificacao,"p,a"
+601,Rel - Igreja cristã (601),tipo_edificacao,Edificação religiosa,constr_edificacao,"p,a"
+602,Rel - Templo (602),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+603,Rel - Centro religioso (603),tipo_edificacao,Edificação religiosa,constr_edificacao,"p,a"
+604,Rel - Mosteiro (604),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+605,Rel - Convento (605),tipo_edificacao,Edificação religiosa,constr_edificacao,"p,a"
+606,Rel - Mesquita (606),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+607,Rel - Sinagoga (607),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+608,Rel - Capela Mortuária (608),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+609,Rel - Terreiro (609),tipo_edificacao,Edificação religiosa,constr_edificacao,"p,a"
+610,Rel - Administração (610),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+611,Rel - Igreja não cristã (611),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+698,Rel - Outros (698),tipo_edificacao,Edificação religiosa,constr_edificacao,"a,p"
+709,Tur - Cruzeiro (709),tipo_edificacao,Edificação ou construção turística,constr_edificacao,"a,p"
+710,Tur - Estátua (710),tipo_edificacao,Edificação ou construção turística,constr_edificacao,"a,p"
+711,Tur - Mirante (711),tipo_edificacao,Edificação ou construção turística,constr_edificacao,"p,a"
+712,Tur - Monumento (712),tipo_edificacao,Edificação ou construção turística,constr_edificacao,"p,a"
+713,Tur - Panteão (713),tipo_edificacao,Edificação ou construção turística,constr_edificacao,"a,p"
+798,Tur - Outros (798),tipo_edificacao,Edificação ou construção turística,constr_edificacao,"a,p"
+801,Laz - Estádio (801),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+802,Laz - Ginásio (802),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+803,Laz - Museu (803),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+804,Laz - Teatro (804),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+805,Laz - Anfiteatro (805),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+806,Laz - Espaço de exibição de filmes (806),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+807,Laz - Centro cultural (807),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+808,Laz - Plataforma de pesca (808),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+809,Laz - Arquivo (809),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+810,Laz - Biblioteca (810),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+811,Laz - Centro de documentação (811),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+812,Laz - Circo (812),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+813,Laz - Concha acústica (813),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+814,Laz - Conservatório (814),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+815,Laz - Coreto ou tribuna (815),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+817,Laz - Equipamentos culturais diversos (817),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+818,Laz - Espaço de eventos e/ou cultural (818),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+819,Laz - Galeria (819),tipo_edificacao,Edificação de lazer,constr_edificacao,"a,p"
+898,Laz - Outros (898),tipo_edificacao,Edificação de lazer,constr_edificacao,"p,a"
+903,Comerc - Centro comercial (903),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"p,a"
+904,Comerc - Mercado (904),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"p,a"
+905,Comerc - Centro de convenções (905),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"a,p"
+907,Comerc - Hotel / motel / pousada (907),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"p,a"
+908,Comerc - Banco (908),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"p,a"
+909,Comerc - Centro de exposições (909),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"a,p"
+910,Comerc - Mercado público (910),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"a,p"
+998,Comerc - Outros (998),tipo_edificacao,Edificação de comércio e serviço,constr_edificacao,"a,p"
+1015,Ind - Fabricação alimentícia e bebidas (1015),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1016,Ind - Fabricação de produtos do fumo (1016),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1017,Ind - Fabricação de produtos têxteis (1017),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1018,Ind - Confecção de artigos de vestuário e acessórios (1018),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1019,"Ind - Preparação de couros, artefatos de couro, artigos de viagem e calçados (1019)",tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1020,Ind - Fabricação de produtos de madeira e celulose (1020),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1021,"Ind - Fabricação de celulose, papel e produtos de papel (1021)",tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1022,"Ind - Industria de edição, impressão e reprodução de gravações (1022)",tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1023,"Ind - Fabricação de coque, refino de petróleo, elaboração de combustíveis nucleares e produção de álcool (1023)",tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1024,Ind - Fabricação de produtos químicos (1024),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1025,Ind - Fabricação de artigos de borracha e material plástico (1025),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1026,Ind - Fabricação de produtos de minerais não-metálicos (1026),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1027,Ind - Indústria de metalurgia básica (1027),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1028,Ind - Fabricação de produtos de metal (1028),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1029,Ind - Fabricação de máquinas e equipamentos (1029),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1030,Ind - Fabriação de máquinas de escritório e equipamentos de informática (1030),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1031,"Ind - Fabricação de máquinas, aparelhos e materiais elétricos (1031)",tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1032,"Ind - Fabricação de material eletrônico, de aparelhos e equipamentos de comunicações (1032)",tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1033,"Ind - Fabricação de equipamentos de instrumentação médico-hospitalares, instrumentos de precisão e ópticos, automação industrial, cronômetros e relógios (1033)",tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1034,"Ind - Fabricação e montagem de veículos automotores, reboques e carrocerias (1034)",tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1035,Ind - Fabricação de outros equipamentos de transporte (1035),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1036,Ind - Fabricação de móveis e indústrias diversas (1036),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1037,Ind - Indústria reciclagem (1037),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1045,Ind - Indústria de construção (1045),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1046,Ind - Chaminé (1046),tipo_edificacao,Edificação industrial,constr_edificacao,"a,p"
+1098,Ind - Outros (1098),tipo_edificacao,Edificação industrial,constr_edificacao,"p,a"
+1110,Ext Min - Extração de carvão mineral (1110),tipo_edificacao,Edificação de extração mineral,constr_edificacao,"p,a"
+1111,Ext Min - Extração de petróleo e serviços relacionados (1111),tipo_edificacao,Edificação de extração mineral,constr_edificacao,"p,a"
+1113,Ext Min - Extração de minerais metálicos (1113),tipo_edificacao,Edificação de extração mineral,constr_edificacao,"a,p"
+1114,Ext Min - Extração de minerais não-metálicos (1114),tipo_edificacao,Edificação de extração mineral,constr_edificacao,"p,a"
+1198,Ext Min - Outros (1198),tipo_edificacao,Edificação de extração mineral,constr_edificacao,"a,p"
+1212,Agro - Sede operacional de fazenda (1212),tipo_edificacao,Edificação agropecuária,constr_edificacao,"p,a"
+1213,Agro - Aviário (1213),tipo_edificacao,Edificação agropecuária,constr_edificacao,"a,p"
+1214,Agro - Apiário (1214),tipo_edificacao,Edificação agropecuária,constr_edificacao,"p,a"
+1215,Agro - Viveiro de plantas (1215),tipo_edificacao,Edificação agropecuária,constr_edificacao,"p,a"
+1216,Agro - Viveiro para aquicultura (1216),tipo_edificacao,Edificação agropecuária,constr_edificacao,"a,p"
+1217,Agro - Pocilga (1217),tipo_edificacao,Edificação agropecuária,constr_edificacao,"a,p"
+1218,Agro - Curral (1218),tipo_edificacao,Edificação agropecuária,constr_edificacao,"p,a"
+1298,Agro - Outros (1298),tipo_edificacao,Edificação agropecuária,constr_edificacao,"a,p"
+1303,Pub Civ - Cartorial (1303),tipo_edificacao,Edificação pública civil,constr_edificacao,"a,p"
+1304,Pub Civ - Gestão pública (1304),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1305,Pub Civ - Eleitoral (1305),tipo_edificacao,Edificação pública civil,constr_edificacao,"a,p"
+1306,Pub Civ - Produção ou pequisa pública (1306),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1307,Pub Civ - Seguridade social (1307),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1308,Pub Civ - Câmara municipal (1308),tipo_edificacao,Edificação pública civil,constr_edificacao,"a,p"
+1309,Pub Civ - Assembléia legislativa (1309),tipo_edificacao,Edificação pública civil,constr_edificacao,"a,p"
+1310,Pub Civ - Autarquia (1310),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1313,Pub Civ - Fórum (1313),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1314,Pub Civ - Fundação (1314),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1315,Pub Civ - Procuradoria (1315),tipo_edificacao,Edificação pública civil,constr_edificacao,"a,p"
+1316,Pub Civ - Secretaria (1316),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1322,Pub Civ - Prefeitura (1322),tipo_edificacao,Edificação pública civil,constr_edificacao,"a,p"
+1398,Pub Civ - Outros (1398),tipo_edificacao,Edificação pública civil,constr_edificacao,"p,a"
+1401,Habitacão indigena isolada (1401),tipo_edificacao,Habitacão indigena,constr_edificacao,"a,p"
+1402,Habitacão indigena coletiva (1402),tipo_edificacao,Habitacão indigena,constr_edificacao,"a,p"
+1501,Edificação de medição de fenômenos (1501),tipo_edificacao,Medição de fenômenos,constr_edificacao,"a,p"
+1712,Pub Mil - Aquartelamento (1712),tipo_edificacao,Edificação militar,constr_edificacao,"a,p"
+1717,Pub Mil - Hotel de trânsito (1717),tipo_edificacao,Edificação militar,constr_edificacao,"a,p"
+1718,Pub Mil - Delegacia de serviço militar (1718),tipo_edificacao,Edificação militar,constr_edificacao,"a,p"
+1724,Pub Mil - Capitania dos portos (1724),tipo_edificacao,Edificação militar,constr_edificacao,"a,p"
+1798,Pub Mil - Outros (1798),tipo_edificacao,Edificação militar,constr_edificacao,"a,p"
+1910,Posto Fisc - Tributação (1910),tipo_edificacao,Posto fiscal,constr_edificacao,"a,p"
+1912,Posto Fisc - Fiscalização sanitária (1912),tipo_edificacao,Posto fiscal,constr_edificacao,"p,a"
+1913,Posto Fisc - Posto de pesagem (1913),tipo_edificacao,Posto fiscal,constr_edificacao,"p,a"
+1995,Posto Fisc - Misto (1995),tipo_edificacao,Posto fiscal,constr_edificacao,"a,p"
+1998,Posto Fisc - Outros (1998),tipo_edificacao,Posto fiscal,constr_edificacao,"a,p"
+2025,Sau - Atendimento hospitalar (2025),tipo_edificacao,Edificação de saúde,constr_edificacao,"p,a"
+2026,Sau - Atendimento hospitalar especializado (2026),tipo_edificacao,Edificação de saúde,constr_edificacao,"p,a"
+2027,Sau - Atendimento a urgência e emergências (pronto socorro) (2027),tipo_edificacao,Edificação de saúde,constr_edificacao,"a,p"
+2028,Sau - Atenção ambulatorial (posto e centro de saúde) (2028),tipo_edificacao,Edificação de saúde,constr_edificacao,"p,a"
+2029,Sau - Serviços de complementação diagnóstica ou terapêutica (2029),tipo_edificacao,Edificação de saúde,constr_edificacao,"a,p"
+2030,Sau - Outras atividades relacionadas com a atenção à saúde (instituto de pesquisa) (2030),tipo_edificacao,Edificação de saúde,constr_edificacao,"a,p"
+2031,Sau - Serviços veterinários (2031),tipo_edificacao,Edificação de saúde,constr_edificacao,"a,p"
+2101,Ssoc – Serviço Social (2101),tipo_edificacao,Edificação de desenvolvimento social,constr_edificacao,"a,p"
+2208,Rod - Terminal interestadual (2208),tipo_edificacao,Edificação rodoviária,constr_edificacao,"a,p"
+2209,Rod - Terminal urbano (2209),tipo_edificacao,Edificação rodoviária,constr_edificacao,"p,a"
+2210,Rod - Parada interestadual (2210),tipo_edificacao,Edificação rodoviária,constr_edificacao,"a,p"
+2213,Rod - Posto de pedágio (2213),tipo_edificacao,Edificação rodoviária,constr_edificacao,"a,p"
+2298,Rod - Outros (2298),tipo_edificacao,Edificação rodoviária,constr_edificacao,"p,a"
+2316,Ferrov - Estação ferroviária de passageiros (2316),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"a,p"
+2317,Ferrov - Estação metroviária (2317),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"a,p"
+2318,Ferrov - Terminal ferroviário de cargas (2318),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"p,a"
+2319,Ferrov - Terminal ferroviário de passageiros e cargas (2319),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"a,p"
+2320,Ferrov - Oficina de manutenção (2320),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"a,p"
+2321,Ferrov - Administração (2321),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"a,p"
+2398,Ferrov - Outros (2398),tipo_edificacao,Edificação ferroviária ou metroviária,constr_edificacao,"a,p"
+2426,Aero - Terminal de passageiros (2426),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"p,a"
+2427,Aero - Terminal de cargas (2427),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"p,a"
+2428,Aero - Torre de controle (2428),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"a,p"
+2429,Aero - Hangar (2429),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"a,p"
+2430,Aero - Serviço de Combate à incendios (SCI) (2430),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"a,p"
+2431,Aero - Administração (2431),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"p,a"
+2498,Aero - Outros (2498),tipo_edificacao,Edificação aeroportuária,constr_edificacao,"p,a"
+2501,Port - Edificação portuária (2501),tipo_edificacao,Edificação portuária,constr_edificacao,"a,p"
+2601,Posto de combustivel (2601),tipo_edificacao,Posto de combustivel,constr_edificacao,"p,a"
+2901,Dip – Consulado (2901),tipo_edificacao,Representação diplomática,constr_edificacao,"p,a"
+2902,Dip – Embaixada (2902),tipo_edificacao,Representação diplomática,constr_edificacao,"p,a"
+3001,Seg – Delegacia de polícia civil (3001),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"p,a"
+3002,Seg – Posto policia militar (3002),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"p,a"
+3003,Seg – Posto guarda municipal (3003),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"a,p"
+3004,Seg – Posto de polícia rodoviária federal (3004),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"a,p"
+3005,Seg – Polícia militar (3005),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"a,p"
+3006,Seg - Prisional (3006),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"a,p"
+3007,Seg - Bombeiros Militar (3007),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"p,a"
+3008,Seg - Bombeiros Civil (3008),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"a,p"
+3098,Seg – Outras polícias (3098),tipo_edificacao,Edificação de segurança pública,constr_edificacao,"p,a"
+0,Desconhecido (0),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+1,Poço - água subterrânea (1),tipo_extracao_mineral,NULL,constr_extracao_mineral,"a,p"
+3,Petróleo (3),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+4,Mina / Pedreira (4),tipo_extracao_mineral,NULL,constr_extracao_mineral,"a,p"
+5,Garimpo (5),tipo_extracao_mineral,NULL,constr_extracao_mineral,"p,a"
+5,Gás (5),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+6,Salina (6),tipo_extracao_mineral,NULL,constr_extracao_mineral,"a,p"
+8,Poço - petróleo (8),tipo_extracao_mineral,NULL,constr_extracao_mineral,"p,a"
+18,Cascalho (18),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+22,Pedra (brita) (22),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+23,Granito (23),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+24,Mármore (24),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+25,Bauxita (25),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+26,Manganês (26),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+27,Talco (27),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+32,Cobre (32),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+33,Carvão mineral (33),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+34,Sal (34),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+35,Ferro (35),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+37,Ouro (37),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+38,Diamante (38),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+39,Prata (39),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+40,Pedra preciosa (40),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+42,Areia (42),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+43,Saibro/piçarra (43),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+45,Ágata (45),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+47,Água marinha (47),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+48,Água mineral (48),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+49,Alexandrita (49),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+50,Ametista (50),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+51,Amianto (51),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+52,Argila (52),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+53,Barita (53),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+54,Bentonita (54),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+55,Calcário (55),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+56,Carvão vegetal (56),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+57,Caulim (57),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+59,Chumbo (59),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+60,Citrino (60),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+61,Crisoberilo (61),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+62,Cristal de rocha (62),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+63,Cromo (63),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+64,Diatomita (64),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+65,Dolomito (65),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+67,Esmeralda (67),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+68,Estanho (68),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+69,Feldspato (69),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+70,Fosfato (70),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+71,Gipsita (71),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+72,Grafita (72),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+73,Granada (73),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+74,Lítio (74),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+78,Magnesita (78),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+79,Mica (79),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+80,Nióbio (80),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+81,Níquel (81),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+82,Opala (82),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+83,Rocha ornamental (83),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+84,Sal-gema (84),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+85,Terras raras (85),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+86,Titânio (86),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+87,Topázio (87),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+88,Tório (88),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+89,Tungstênio (89),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+90,Turfa (90),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+91,Turmalina (91),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+92,Urânio (92),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+93,Vermiculita (93),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+94,Zinco (94),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+99,Outros (99),tipo_produto_residuo,NULL,constr_extracao_mineral,"a,p"
+100,Zircônio (100),tipo_produto_residuo,NULL,constr_extracao_mineral,"p,a"
+101,Cemitério - Crematório (101),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"p,l,a"
+102,Cemitério Parque (102),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"l,p,a"
+103,Cemitério Vertical (103),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"l,p,a"
+104,Cemitério Comum - Cristã (104),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"a,l,p"
+105,Cemitério - Túmulo isolado (105),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"p,l,a"
+106,Cemitério Comum - Muçulmana (106),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"p,l,a"
+107,Cemitério Comum - Israelita (107),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"l,p,a"
+108,Cemitério Comum - Outras religiões (108),tipo_ocupacao_solo,Cemitério,constr_ocupacao_solo,"a,l,p"
+201,Campo/Quadra de futebol (201),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"l,p,a"
+202,Campo/Quadra de basquete (202),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"l,p,a"
+203,Campo/Quadra de vôlei (203),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"l,p,a"
+204,Campo/Quadra de pólo (204),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"l,p,a"
+205,Campo/Quadra de hipismo (205),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"l,p,a"
+206,Campo/Quadra poliesportiva (206),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"a,l,p"
+207,Campo/Quadra de tênis (207),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"p,l,a"
+298,Campo/Quadra - Outras quadras esportivas (298),tipo_ocupacao_solo,Campo ou quadra,constr_ocupacao_solo,"l,a,p"
+301,Pista de atletismo (301),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"p,l,a"
+302,Pista de ciclismo (302),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"p,l,a"
+303,Pista de motociclismo (303),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"p,a,l"
+304,Pista de automobilismo (304),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"l,a,p"
+305,Pista de corrida de cavalos (305),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"l,p,a"
+306,Pista de bicicross (306),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"p,a,l"
+307,Pista de motocross (307),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"l,p,a"
+398,Pista - Outras pistas de competição (398),tipo_ocupacao_solo,Pista competição,constr_ocupacao_solo,"a,l,p"
+404,Pátio rodoviário (404),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"a,p,l"
+405,Pátio ferroviário (405),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"a,p,l"
+406,Pátio metroviário (406),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"p,a,l"
+409,Pátio aeroportuário (409),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"l,a,p"
+414,Pátio portuário (414),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"a,p,l"
+415,Pátio hidroviário (415),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"l,a,p"
+416,Pátio de dutos (416),tipo_ocupacao_solo,Pátio,constr_ocupacao_solo,"a,l,p"
+501,Piscina (501),tipo_ocupacao_solo,Piscina,constr_ocupacao_solo,"a,p,l"
+601,Sítio Arqueológico (601),tipo_ocupacao_solo,Sítio Arqueológico,constr_ocupacao_solo,"p,l,a"
+701,Ruína (701),tipo_ocupacao_solo,Ruína,constr_ocupacao_solo,"p,a,l"
+801,Moega (801),tipo_ocupacao_solo,Equipamento agropecuário,constr_ocupacao_solo,"a,p,l"
+802,Moinho (802),tipo_ocupacao_solo,Equipamento agropecuário,constr_ocupacao_solo,"p,l,a"
+803,Secador (803),tipo_ocupacao_solo,Equipamento agropecuário,constr_ocupacao_solo,"l,p,a"
+804,Tombador (804),tipo_ocupacao_solo,Equipamento agropecuário,constr_ocupacao_solo,"l,a,p"
+805,Elevador de grãos (805),tipo_ocupacao_solo,Equipamento agropecuário,constr_ocupacao_solo,"a,l,p"
+806,Pivô central (806),tipo_ocupacao_solo,Equipamento agropecuário,constr_ocupacao_solo,"p,a,l"
+901,Estacionamento (901),tipo_ocupacao_solo,Estacionamento,constr_ocupacao_solo,"p,l,a"
+1001,Arquibancada (1001),tipo_ocupacao_solo,Arquibancada,constr_ocupacao_solo,"a,p,l"
+1101,Farol ou farolete (1101),tipo_ocupacao_solo,Farol,constr_ocupacao_solo,"l,p,a"
+1601,Estação climatológica principal (1601),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"a,p,l"
+1602,Estação climatológica auxiliar (1602),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"l,p,a"
+1603,Estação agroclimatológica (1603),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"p,a,l"
+1604,Estação pluviométrica (1604),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"a,p,l"
+1605,Estação eólica (1605),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"p,l,a"
+1606,Estação evaporimétrica (1606),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"l,p,a"
+1607,Estação solarimétrica (1607),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"a,p,l"
+1608,Estação de radar meteorológico (1608),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"p,l,a"
+1609,Estação de rádiosonda (1609),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"l,p,a"
+1610,Estação fluviométrica (1610),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"a,l,p"
+1611,Estação maregráfica (1611),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"p,a,l"
+1612,Estação mares terrestres - crosta (1612),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"l,p,a"
+1613,Estação Metero-maregráfica (1613),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"a,p,l"
+1614,Estação Hidrológica (1614),tipo_ocupacao_solo,Ponto de estacão de medição de fenômenos,constr_ocupacao_solo,"a,p,l"
+8,Escarpa (8),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"l,a,p"
+13,Falésia (13),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"p,a,l"
+14,Talude (14),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"a,p,l"
+15,Dolina (15),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"l,a,p"
+16,Duna (16),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"a,l,p"
+19,Gruta (19),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"a,p,l"
+20,Caverna (20),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"p,a,l"
+21,Rocha - Matacão/pedra (21),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"l,p,a"
+22,Rocha - Penedo isolado (22),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"p,l,a"
+23,Rocha - Area rochosa/lajedo (23),tipo_elemento_fisiografico,NULL,elemnat_elemento_fisiografico,"l,p,a"
+1,Poço dágua (1),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,l,p"
+2,Poço artesiano (2),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,l,p"
+3,Olho dágua (3),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,l,p"
+6,Foz marítima (6),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,p,l"
+8,Rocha em água (8),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,p,l"
+9,Cachoeira (9),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"l,a,p"
+10,Salto (10),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"p,a,l"
+11,Catarata (11),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,p,l"
+12,Corredeira (12),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"p,a,l"
+14,Banco de areia fluvial (14),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,p,l"
+15,Banco de areia marítimo (15),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"l,a,p"
+16,Banco de areia lacustre (16),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,p,l"
+17,Banco de areia cordão arenoso (17),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"p,l,a"
+18,Recife contiguo (18),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,l,p"
+19,Recife afastado (19),tipo_elemento_hidrografico,NULL,elemnat_elemento_hidrografico,"a,l,p"
+1,Fluvial (1),tipo_ilha,NULL,elemnat_ilha,"a,p"
+2,Marítima (2),tipo_ilha,NULL,elemnat_ilha,"p,a"
+3,Lacustre (3),tipo_ilha,NULL,elemnat_ilha,"a,p"
+4,Sumidouro (4),tipo_sumidouro_vertedouro,NULL,elemnat_sumidouro_vertedouro,p
+5,Vertedouro (5),tipo_sumidouro_vertedouro,NULL,elemnat_sumidouro_vertedouro,p
+1,Serra (1),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+2,Morro (2),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+3,Montanha (3),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"p,l"
+4,Chapada (4),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"p,l"
+5,Maciço (5),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+6,Planalto (6),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+7,Planície (7),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+9,Península (9),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+10,Ponta (10),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+11,Cabo (11),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+12,Praia (12),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+17,Pico (17),tipo_toponimo_fisiografico,NULL,elemnat_toponimo_fisiografico_natural,"l,p"
+1,Rio (1),tipo_trecho_drenagem,NULL,elemnat_trecho_drenagem,l
+2,Canal (2),tipo_trecho_drenagem,NULL,elemnat_trecho_drenagem,l
+3,Trecho pluvial (3),tipo_trecho_drenagem,NULL,elemnat_trecho_drenagem,l
+4,Canal encoberto (4),tipo_trecho_drenagem,NULL,elemnat_trecho_drenagem,l
+5,Canal não operacional (5),tipo_trecho_drenagem,NULL,elemnat_trecho_drenagem,l
+26,Corte (26),tipo_alteracao_fisiografica,NULL,infra_alteracao_fisiografica_antropica,l
+27,Aterro (27),tipo_alteracao_fisiografica,NULL,infra_alteracao_fisiografica_antropica,l
+1,Barragem (1),tipo_barragem,NULL,infra_barragem,"l,a"
+2,Dique (2),tipo_barragem,NULL,infra_barragem,"l,a"
+302,Linha de distribuição de energia (302),tipo_elemento_energia,Linha de energia,infra_elemento_energia,"l,p,a"
+303,Linha de transmissão de energia (303),tipo_elemento_energia,Linha de energia,infra_elemento_energia,"a,l,p"
+405,Estação geradora – Eólica (405),tipo_elemento_energia,Estação geradora de energia,infra_elemento_energia,"l,a,p"
+406,Estação geradora – Solar (406),tipo_elemento_energia,Estação geradora de energia,infra_elemento_energia,"l,a,p"
+407,Estação geradora – Maré-motriz (407),tipo_elemento_energia,Estação geradora de energia,infra_elemento_energia,"l,a,p"
+408,Estação geradora – Hidrelétrica (408),tipo_elemento_energia,Estação geradora de energia,infra_elemento_energia,"a,l,p"
+409,Estação geradora – Termelétrica (409),tipo_elemento_energia,Estação geradora de energia,infra_elemento_energia,"l,p,a"
+498,Estação geradora – Outras (498),tipo_elemento_energia,Estação geradora de energia,infra_elemento_energia,"p,a,l"
+1401,Torre de energia (1401),tipo_elemento_energia,Torre de energia,infra_elemento_energia,"a,p,l"
+1701,Aerogerador (1701),tipo_elemento_energia,Aerogerador,infra_elemento_energia,"l,a,p"
+1801,Subestação de transmissão de energia elétrica (1801),tipo_elemento_energia,Subestação de energia,infra_elemento_energia,"p,a,l"
+1802,Subestação de distribuição de energia elétrica (1802),tipo_elemento_energia,Subestação de energia,infra_elemento_energia,"a,l,p"
+701,Quebramar (701),tipo_elemento_infraestrutura,Quebramar,infra_elemento_infraestrutura,"p,l,a"
+801,Molhe (801),tipo_elemento_infraestrutura,Molhe,infra_elemento_infraestrutura,"a,l,p"
+901,Comporta (901),tipo_elemento_infraestrutura,Comporta,infra_elemento_infraestrutura,"l,a,p"
+1001,Eclusa (1001),tipo_elemento_infraestrutura,Eclusa,infra_elemento_infraestrutura,"l,p,a"
+1201,Torre de comunicação (1201),tipo_elemento_infraestrutura,Torre de comunicação,infra_elemento_infraestrutura,"l,p,a"
+1301,Antena de comunicação (1301),tipo_elemento_infraestrutura,Antena de comunicação,infra_elemento_infraestrutura,"l,a,p"
+1400,Plataforma- Desconhecido (1400),tipo_elemento_infraestrutura,Plataforma,infra_elemento_infraestrutura,"l,a,p"
+1401,Plataforma- Petróleo (1401),tipo_elemento_infraestrutura,Plataforma,infra_elemento_infraestrutura,"p,l,a"
+1402,Plataforma- Gás (1402),tipo_elemento_infraestrutura,Plataforma,infra_elemento_infraestrutura,"a,p,l"
+1495,Plataforma- Mista (1495),tipo_elemento_infraestrutura,Plataforma,infra_elemento_infraestrutura,"p,a,l"
+1501,Funicular (1501),tipo_elemento_infraestrutura,Funicular,infra_elemento_infraestrutura,"p,a,l"
+1601,Cremalheira (1601),tipo_elemento_infraestrutura,Cremalheira,infra_elemento_infraestrutura,"p,l,a"
+1701,Girador Ferroviário (1701),tipo_elemento_infraestrutura,Girador Ferroviário,infra_elemento_infraestrutura,"p,l,a"
+1801,Fundeadouro (1801),tipo_elemento_infraestrutura,Fundeadouro,infra_elemento_infraestrutura,"l,a,p"
+1938,Atrac - Cais (1938),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"a,p,l"
+1939,Atrac - Cais flutuante (1939),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"a,l,p"
+1940,Atrac - Trapiche (1940),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"p,a,l"
+1941,Atrac - Molhe de atracação (1941),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"a,p,l"
+1942,Atrac - Pier (1942),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"l,a,p"
+1943,Atrac - Dolfim (1943),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"p,l,a"
+1944,Atrac - Desembarcadouro (1944),tipo_elemento_infraestrutura,Atracadouro Terminal,infra_elemento_infraestrutura,"p,l,a"
+2001,Caminho Aéreo – Teleférico (2001),tipo_elemento_infraestrutura,Caminho Aéreo,infra_elemento_infraestrutura,"l,p,a"
+2098,Caminho Aéreo – Outros (2098),tipo_elemento_infraestrutura,Caminho Aéreo,infra_elemento_infraestrutura,"l,a,p"
+101,Túnel (101),tipo_elemento_viario,Túnel,infra_elemento_viario,"p,l"
+102,Túnel - Passagem subterrânea sob via (102),tipo_elemento_viario,Túnel,infra_elemento_viario,"p,l"
+201,Ponte móvel (201),tipo_elemento_viario,Ponte,infra_elemento_viario,"l,p"
+202,Ponte pênsil (202),tipo_elemento_viario,Ponte,infra_elemento_viario,"p,l"
+203,Ponte fixa (203),tipo_elemento_viario,Ponte,infra_elemento_viario,"p,l"
+204,Ponte estaiada (204),tipo_elemento_viario,Ponte,infra_elemento_viario,"p,l"
+301,Passagem elevada (301),tipo_elemento_viario,Passagem elevada / Viaduto,infra_elemento_viario,"l,p"
+302,Viaduto (302),tipo_elemento_viario,Passagem elevada / Viaduto,infra_elemento_viario,"l,p"
+401,Travessia - Vau natural (401),tipo_elemento_viario,Travessia,infra_elemento_viario,"p,l"
+402,Travessia - Vau construído (402),tipo_elemento_viario,Travessia,infra_elemento_viario,"p,l"
+501,Galeria/Bueiro (501),tipo_elemento_viario,Galeria/Bueiro,infra_elemento_viario,"l,p"
+607,Pedestre - Passagem subterrânea (607),tipo_elemento_viario,Travessia pedestre,infra_elemento_viario,"l,p"
+608,Pedestre - Passarela (608),tipo_elemento_viario,Travessia pedestre,infra_elemento_viario,"p,l"
+609,Pedestre - Pinguela (609),tipo_elemento_viario,Travessia pedestre,infra_elemento_viario,"l,p"
+701,Ferrov - Passagem em nível (701),tipo_elemento_viario,Cruzamento ferroviário,infra_elemento_viario,"l,p"
+5,Bonde (5),tipo_ferrovia,NULL,infra_ferrovia,l
+6,Aeromóvel (6),tipo_ferrovia,NULL,infra_ferrovia,l
+7,Trem (7),tipo_ferrovia,NULL,infra_ferrovia,l
+8,Metrô (8),tipo_ferrovia,NULL,infra_ferrovia,l
+1,Calçadão / Rua pedestre (1),tipo_mobilidade_urbana,NULL,infra_mobilidade_urbana,l
+2,Ciclovia (2),tipo_mobilidade_urbana,NULL,infra_mobilidade_urbana,l
+9,Pista de pouso (9),tipo_pista_pouso,NULL,infra_pista_pouso,"p,l,a"
+10,Pista de táxi (10),tipo_pista_pouso,NULL,infra_pista_pouso,"a,l,p"
+11,Heliponto (11),tipo_pista_pouso,NULL,infra_pista_pouso,"a,l,p"
+1,Balsa (1),tipo_travessia,NULL,infra_travessia_hidroviaria,l
+2,Bote transportador (2),tipo_travessia,NULL,infra_travessia_hidroviaria,l
+101,Calha - Água pluvial (101),tipo_trecho_duto,Calha,infra_trecho_duto,l
+201,Correia transp - Minério (201),tipo_trecho_duto,Correia transportadora,infra_trecho_duto,l
+202,Correia transp - Grãos (202),tipo_trecho_duto,Correia transportadora,infra_trecho_duto,l
+298,Correia transp - Outros (298),tipo_trecho_duto,Correia transportadora,infra_trecho_duto,l
+300,Duto – Desconhecido (300),tipo_trecho_duto,Duto,infra_trecho_duto,l
+301,Duto – Água (301),tipo_trecho_duto,Duto,infra_trecho_duto,l
+302,Duto – Óleo (302),tipo_trecho_duto,Duto,infra_trecho_duto,l
+303,Duto – Gasolina (303),tipo_trecho_duto,Duto,infra_trecho_duto,l
+304,Duto – Álcool (304),tipo_trecho_duto,Duto,infra_trecho_duto,l
+305,Duto – Querosene (305),tipo_trecho_duto,Duto,infra_trecho_duto,l
+306,Duto – Petróleo (306),tipo_trecho_duto,Duto,infra_trecho_duto,l
+307,Duto – Nafta (307),tipo_trecho_duto,Duto,infra_trecho_duto,l
+308,Duto – Gás (308),tipo_trecho_duto,Duto,infra_trecho_duto,l
+309,Duto – Efluentes (309),tipo_trecho_duto,Duto,infra_trecho_duto,l
+310,Duto – Esgoto (310),tipo_trecho_duto,Duto,infra_trecho_duto,l
+398,Duto – Outros (398),tipo_trecho_duto,Duto,infra_trecho_duto,l
+2,Estrada/Rodovia (2),tipo_via_deslocamento,NULL,infra_via_deslocamento,l
+3,Caminho carroçável (3),tipo_via_deslocamento,NULL,infra_via_deslocamento,l
+4,Auto-estrada (4),tipo_via_deslocamento,NULL,infra_via_deslocamento,l
+5,Arruamento (5),tipo_via_deslocamento,NULL,infra_via_deslocamento,l
+6,Trilha ou Picada (6),tipo_via_deslocamento,NULL,infra_via_deslocamento,l
+1,Cerca (1),tipo_delimitacao_fisica,NULL,llp_delimitacao_fisica,l
+2,Muro (2),tipo_delimitacao_fisica,NULL,llp_delimitacao_fisica,l
+2,Terra indígena (2),tipo_limite_especial,NULL,llp_limite_especial,a
+5,Unidade de Conservação (5),tipo_limite_especial,NULL,llp_limite_especial,a
+24,Área de Proteção Ambiental – APA (24),tipo_limite_especial,NULL,llp_limite_especial,a
+25,Área de Relevante Interesse Ecológico – ARIE (25),tipo_limite_especial,NULL,llp_limite_especial,a
+26,Floresta – FLO (26),tipo_limite_especial,NULL,llp_limite_especial,a
+27,Reserva de Desenvolvimento Sustentável – RDS (27),tipo_limite_especial,NULL,llp_limite_especial,a
+28,Reserva Extrativista – RESEX (28),tipo_limite_especial,NULL,llp_limite_especial,a
+29,Reserva de Fauna – REFAU (29),tipo_limite_especial,NULL,llp_limite_especial,a
+30,Reserva Particular do Patrimônio Natural – RPPN (30),tipo_limite_especial,NULL,llp_limite_especial,a
+31,Estação Ecológica – ESEC (31),tipo_limite_especial,NULL,llp_limite_especial,a
+32,Parque – PAR (32),tipo_limite_especial,NULL,llp_limite_especial,a
+33,Monumento Natural – MONA (33),tipo_limite_especial,NULL,llp_limite_especial,a
+34,Reserva Biológica – REBIO (34),tipo_limite_especial,NULL,llp_limite_especial,a
+35,Refúgio de Vida Silvestre – RVS (35),tipo_limite_especial,NULL,llp_limite_especial,a
+36,Área militar (36),tipo_limite_especial,NULL,llp_limite_especial,a
+1,Cidade (1),tipo_localidade,NULL,llp_localidade,p
+2,Capital estadual (2),tipo_localidade,NULL,llp_localidade,p
+3,Capital federal (3),tipo_localidade,NULL,llp_localidade,p
+4,Vila (4),tipo_localidade,NULL,llp_localidade,p
+5,Aglomerado rural isolado – Núcleo (5),tipo_localidade,NULL,llp_localidade,p
+6,Aglomerado rural isolado – Povoado (6),tipo_localidade,NULL,llp_localidade,p
+7,Outros aglomerados rurais – Lugarejo (7),tipo_localidade,NULL,llp_localidade,p
+8,Nome local (8),tipo_localidade,NULL,llp_localidade,p
+1,Altimétrico (1),tipo_ref,NULL,llp_ponto_controle,p
+1,Vértice de Triangulação – VT (1),tipo_pto,NULL,llp_ponto_controle,p
+2,Planimétrico (2),tipo_ref,NULL,llp_ponto_controle,p
+2,Referëncia de Nível – RN (2),tipo_pto,NULL,llp_ponto_controle,p
+3,Estação Gravimétrica – EG (3),tipo_pto,NULL,llp_ponto_controle,p
+3,Planialtimétrico (3),tipo_ref,NULL,llp_ponto_controle,p
+4,Estação de Poligonal – EP (4),tipo_pto,NULL,llp_ponto_controle,p
+4,Gravimétrico (4),tipo_ref,NULL,llp_ponto_controle,p
+5,Ponto Astronômico – PA (5),tipo_pto,NULL,llp_ponto_controle,p
+6,Ponto Barométrico – B (6),tipo_pto,NULL,llp_ponto_controle,p
+7,Ponto Trigonométrico – RV (7),tipo_pto,NULL,llp_ponto_controle,p
+8,Ponto de Satélite – SAT (8),tipo_pto,NULL,llp_ponto_controle,p
+9,Ponto de controle (9),tipo_pto,NULL,llp_ponto_controle,p
+12,Centro perspectivo (12),tipo_pto,NULL,llp_ponto_controle,p
+13,Ponto fotogramétrico (13),tipo_pto,NULL,llp_ponto_controle,p
+14,Marco internacional (14),tipo_pto,NULL,llp_ponto_controle,p
+15,Marco estadual (15),tipo_pto,NULL,llp_ponto_controle,p
+16,Marco municipal (16),tipo_pto,NULL,llp_ponto_controle,p
