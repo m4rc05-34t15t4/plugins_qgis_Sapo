@@ -2,7 +2,7 @@
 import os
 from qgis.PyQt.QtWidgets import QAction, QToolBar
 from qgis.PyQt.QtGui import QIcon
-
+from . import resources
 from .encontrar_classe import run
 
 class Plugin:

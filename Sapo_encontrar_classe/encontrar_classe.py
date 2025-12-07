@@ -5,11 +5,11 @@ def run():
     import pandas as pd
     from fuzzywuzzy import process #from rapidfuzz import process
     from qgis.core import QgsProject, QgsVectorLayer, QgsWkbTypes, QgsDefaultValue
-    from PyQt5.QtGui import QMovie
+    from PyQt5.QtGui import QMovie, QIcon
     from qgis.PyQt.QtWidgets import QTableWidget, QTableWidgetItem, QHBoxLayout, QWidget, QMessageBox, QDialog, QLineEdit, QPushButton, QVBoxLayout, QLabel
     from qgis.utils import iface
     from qgis.PyQt.QtCore import Qt, QSize
-    from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QDialog, QVBoxLayout
+    from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QDialog, QVBoxLayout, QComboBox, QStyleFactory
 
     # Caminho da pasta de libs dentro do plugin
     plugin_dir = os.path.dirname(__file__)
@@ -17,6 +17,21 @@ def run():
     libs_path = os.path.join(plugin_dir, "libs")
     if libs_path not in sys.path:
         sys.path.insert(0, libs_path)
+
+    #Retornar nomes csv
+    def listar_csv_lista_classes(plugin_dir):
+        """
+        Retorna uma lista com o nome de todos os arquivos .csv
+        dentro da pasta 'lista_classes' localizada no plugin.
+        """
+        pasta = os.path.join(plugin_dir, "lista_classes")
+        if not os.path.exists(pasta):
+            return []  # pasta não existe
+        arquivos_csv = [
+            os.path.splitext(f)[0] for f in os.listdir(pasta)
+            if f.lower().endswith(".csv") and os.path.isfile(os.path.join(pasta, f))
+        ]
+        return arquivos_csv
 
     #função de set atributo
     def set_atributos_default_tipo(layer, code_value):
@@ -64,13 +79,13 @@ def run():
                 # Habilitar a ferramenta de adição de feições de acordo com o tipo de geometria
                 if geometry_type == QgsWkbTypes.PointGeometry:
                     iface.actionAddFeature().trigger()
-                    QMessageBox.warning(None, "Alerta", f"Camada '{layer_name}' identificada como ponto. Ferramenta de adicionar feição (ponto) habilitada.")
+                    #QMessageBox.information(None, "Info", f"Camada '{layer_name}' identificada como ponto. Ferramenta de adicionar feição (ponto) habilitada.")
                 elif geometry_type == QgsWkbTypes.LineGeometry:
                     iface.actionAddFeature().trigger()
-                    QMessageBox.warning(None, "Alerta", f"Camada '{layer_name}' identificada como linha. Ferramenta de adicionar feição (linha) habilitada.")
+                    #QMessageBox.information(None, "Info", f"Camada '{layer_name}' identificada como linha. Ferramenta de adicionar feição (linha) habilitada.")
                 elif geometry_type == QgsWkbTypes.PolygonGeometry:
                     iface.actionAddFeature().trigger()
-                    QMessageBox.warning(None, "Alerta", f"Camada '{layer_name}' identificada como polígono. Ferramenta de adicionar feição (polígono) habilitada.")
+                    #QMessageBox.information(None, "Info", f"Camada '{layer_name}' identificada como polígono. Ferramenta de adicionar feição (polígono) habilitada.")
                 else:
                     QMessageBox.warning(None, "Alerta", "Tipo de geometria desconhecido ou não suportado.")
                     
@@ -88,7 +103,7 @@ def run():
                 item.setTextAlignment(Qt.AlignCenter)
 
     # Função para mostrar os resultados em um layout de tabela
-    def show_table(data):
+    def show_table(data, lista_et):
         dialog = QDialog()
         layout = QVBoxLayout()
 
@@ -151,16 +166,21 @@ def run():
                 btn_ponto.setStyleSheet(estilo_bt_disable)
             else:
                 btn_ponto.setStyleSheet(estilo_bt)
+                btn_ponto.setCursor(Qt.PointingHandCursor)
+
             if 'l' not in tipo_geometria:
                 btn_linha.setDisabled(True)
                 btn_linha.setStyleSheet(estilo_bt_disable)
             else:
                 btn_linha.setStyleSheet(estilo_bt)
+                btn_linha.setCursor(Qt.PointingHandCursor)
+
             if 'a' not in tipo_geometria:
                 btn_poligono.setDisabled(True)
                 btn_poligono.setStyleSheet(estilo_bt_disable)
             else:
                 btn_poligono.setStyleSheet(estilo_bt)
+                btn_poligono.setCursor(Qt.PointingHandCursor)
 
             # Adicionar os botões ao layout de botões
             button_layout.addWidget(btn_ponto)
@@ -219,148 +239,14 @@ def run():
 
         layout.addWidget(table)
         dialog.setLayout(layout)
-        dialog.setWindowTitle("Resultados da Busca")
-        dialog.exec_()
-
-    def find_classe_app_main(self):
-        # Carregar o CSV
-        file_path = os.path.join(self.plugin_dir, FIND_CLASSE_APP_LISTA)
-        df = pd.read_csv(file_path)
-
-        # Criar um diálogo personalizado
-        dialog = QDialog()
-        dialog.setWindowTitle("Buscar Palavra")
-        layout = QVBoxLayout(dialog)
-
-        # Adicionar a imagem ico.png acima do campo de busca
-        #image_label = QLabel(dialog)
-        #pixmap = QPixmap(os.path.join(self.plugin_dir, 'ico.png'))  # Certifique-se de que o caminho esteja correto
-        #pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-        #image_label.setPixmap(pixmap)
-        #image_label.setAlignment(Qt.AlignCenter)  # Centralizar a imagem
-
-        # Adicionar GIF animado
-        gif_label = QLabel()
-        gif = QMovie(os.path.join(self.plugin_dir, "icons/sapo_reambulador_digitando_video.gif"))  # Certifique-se de ter um GIF na pasta do plugin
-        gif_label.setMovie(gif)
-
-        gif.setScaledSize(QSize(250, 250))
-        gif_label.setFixedSize(250, 250)  # Ajuste o tamanho do GIF conforme necessário
-        gif_label.setAlignment(Qt.AlignCenter)
-        gif.start()
-
-        # Adicionar campo de entrada de texto
-        input_field = QLineEdit(dialog)
-        input_field.setPlaceholderText("Digite a palavra ou parte dela:")
-
-        input_field.setStyleSheet("""
-            QLineEdit {
-                font-size: 14px;
-                padding: 8px;
-                border: 2px solid #4CAF50; /* Cor da borda */
-                border-radius: 10px;
-                background-color: #F0F0F0;
-            }
-            QLineEdit:focus {
-                border: 2px solid #66AFE9; /* Cor da borda quando focado */
-                background-color: #FFFFFF;
-            }
-        """)
-
-        # Botão para confirmar a busca estilizado
-        search_button = QPushButton("Buscar", dialog)
-
-        # Estilizar o botão com QSS
-        search_button.setStyleSheet("""
-            QPushButton {
-                font-size: 16px;
-                font-weight: bold;
-                color: white;
-                background-color: #4CAF50; /* Cor de fundo */
-                border: none;
-                padding: 10px;
-                border-radius: 15px;
-            }
-            QPushButton:hover {
-                background-color: #45A049; /* Cor quando o mouse estiver sobre o botão */
-            }
-            QPushButton:pressed {
-                background-color: #2E7D32; /* Cor quando o botão estiver pressionado */
-            }
-        """)
-
-        # Adicionar widgets ao layout
-        layout.addWidget(gif_label)      # Adiciona a imagem acima
-        layout.addWidget(input_field)     # Campo de entrada de texto
-        layout.addWidget(search_button)    # Botão de buscar
-
-        # Função para executar a busca quando o botão for clicado
-        def on_search():
-            search_word = input_field.text()
-            if search_word:
-                # Usar fuzzy matching para buscar palavras similares
-                def match_word(search_term, choices):
-                    matches = process.extract(search_term, choices, limit=5)
-                    return matches
-
-                # Lista de possíveis correspondências (colunas onde você quer buscar a palavra)
-                code_name_choices = df['code_name'].tolist()
-                filter_choices = df['filter'].tolist()
-                tabela_choices = df['tabela'].tolist()
-
-                # Obter os melhores matches para cada coluna
-                code_name_matches = match_word(search_word, code_name_choices)
-                filter_matches = match_word(search_word, filter_choices)
-                tabela_matches = match_word(search_word, tabela_choices)
-
-                # Preparar os dados para exibir na tabela
-                table_data = []
-                for word, score in code_name_matches:
-                    row = df[df['code_name'] == word]
-                    classe = row['foreign_table'].values[0]  # Nome da coluna da classe
-                    tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
-                    code = row['code'].values[0]
-                    table_data.append((word, score, code, classe, tipo_geometria))
-
-                for word, score in filter_matches:
-                    if (word, score) not in [x[:2] for x in table_data]:
-                        row = df[df['filter'] == word]
-                        classe = row['foreign_table'].values[0]  # Nome da coluna da classe
-                        tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
-                        code = row['code'].values[0]
-                        table_data.append((word, score, code, classe, tipo_geometria))
-
-                for word, score in tabela_matches:
-                    if (word, score) not in [x[:2] for x in table_data]:
-                        row = df[df['tabela'] == word]
-                        classe = row['foreign_table'].values[0]  # Nome da coluna da classe
-                        tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
-                        code = row['code'].values[0]
-                        table_data.append((word, score, code, classe, tipo_geometria))
-
-                # Fechar o diálogo após a busca
-                dialog.accept()
-
-                # Exibir os resultados na tabela
-                show_table(table_data)
-
-        # Conectar o botão à função de busca
-        search_button.clicked.connect(on_search)
-        dialog.setLayout(layout)
+        dialog.setWindowTitle(f"Resultados da Busca ({lista_et})")
         dialog.exec_()
     
     #EXECUTAR
 
-    plugin_dir = os.path.dirname(__file__)
-    FIND_CLASSE_APP_LISTA = 'lista_classes/edgv_300.csv'
-
-    # Carregar o CSV
-    file_path = os.path.join(plugin_dir, FIND_CLASSE_APP_LISTA)
-    df = pd.read_csv(file_path)
-
     # Criar um diálogo personalizado
     dialog = QDialog()
-    dialog.setWindowTitle("Encontrar Classe")
+    dialog.setWindowTitle(f"Encontrar Classe")
     layout = QVBoxLayout(dialog)
 
     # Adicionar a imagem ico.png acima do campo de busca
@@ -380,10 +266,51 @@ def run():
     gif_label.setAlignment(Qt.AlignCenter)
     gif.start()
 
+    # Adicionar campo de entrada de select 
+    select_input = QComboBox(dialog)
+    select_input.addItems(listar_csv_lista_classes(plugin_dir))
+    select_input.setStyle(QStyleFactory.create("Fusion"))
+    select_input.setStyleSheet("""
+        QComboBox {
+            font-size: 14px;
+            padding-right: 30px;  /* espaço para a seta */
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #F0F0F0;
+            padding: 6px;
+            color: black;
+        }
+
+        /* Área da seta */
+        QComboBox::drop-down {
+            subcontrol-origin: padding;
+            subcontrol-position: top right;
+            width: 28px;
+            border: none;
+        }
+
+        /* Ícone da seta */
+        QComboBox::down-arrow {
+            image: url(":/img/img/seta_baixo.svg");
+            width: 24px;
+            height: 24px;
+        }                    
+
+        /* Lista de opções */
+        QComboBox QAbstractItemView {
+            background-color: #F0F0F0;
+            color: black;
+            selection-background-color: #66AFE9;
+            selection-color: white;
+            border: 2px solid #66AFE9;
+            border-radius: 10px;
+            padding: 6px;
+        }                               
+    """)      
+
     # Adicionar campo de entrada de texto
     input_field = QLineEdit(dialog)
     input_field.setPlaceholderText("Digite a palavra ou parte dela:")
-
     input_field.setStyleSheet("""
         QLineEdit {
             font-size: 14px;
@@ -397,6 +324,7 @@ def run():
             background-color: #FFFFFF;
         }
     """)
+    input_field.setFocus()
 
     # Botão para confirmar a busca estilizado
     search_button = QPushButton("Encontrar", dialog)
@@ -419,14 +347,27 @@ def run():
             background-color: #2E7D32; /* Cor quando o botão estiver pressionado */
         }
     """)
+    search_button.setCursor(Qt.PointingHandCursor)
 
     # Adicionar widgets ao layout
     layout.addWidget(gif_label)      # Adiciona a imagem acima
+    layout.addWidget(select_input)   
     layout.addWidget(input_field)     # Campo de entrada de texto
     layout.addWidget(search_button)    # Botão de buscar
 
     # Função para executar a busca quando o botão for clicado
     def on_search():
+
+        # Carregar o CSV
+        especificacao_tecnica = select_input.currentText()
+        FIND_CLASSE_APP_LISTA = f'lista_classes/{especificacao_tecnica}.csv'
+        file_path = os.path.join(plugin_dir, FIND_CLASSE_APP_LISTA)
+        if not os.path.exists(file_path):
+            QMessageBox.warning(None, "Alerta", f"Especificação Técnica: {especificacao_tecnica} Não Existe.")
+            return
+        
+        df = pd.read_csv(file_path)
+
         search_word = input_field.text()
         if search_word:
             # Usar fuzzy matching para buscar palavras similares
@@ -448,32 +389,35 @@ def run():
             table_data = []
             for word, score in code_name_matches:
                 row = df[df['code_name'] == word]
-                classe = row['foreign_table'].values[0]  # Nome da coluna da classe
-                tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
-                code = row['code'].values[0]
-                table_data.append((word, score, code, classe, tipo_geometria))
+                if not row.empty:
+                    classe = row['foreign_table'].values[0]  # Nome da coluna da classe
+                    tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
+                    code = row['code'].values[0]
+                    table_data.append((word, score, code, classe, tipo_geometria))
 
             for word, score in filter_matches:
                 if (word, score) not in [x[:2] for x in table_data]:
                     row = df[df['filter'] == word]
-                    classe = row['foreign_table'].values[0]  # Nome da coluna da classe
-                    tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
-                    code = row['code'].values[0]
-                    table_data.append((word, score, code, classe, tipo_geometria))
+                    if not row.empty:
+                        classe = row['foreign_table'].values[0]  # Nome da coluna da classe
+                        tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
+                        code = row['code'].values[0]
+                        table_data.append((word, score, code, classe, tipo_geometria))
 
             for word, score in tabela_matches:
                 if (word, score) not in [x[:2] for x in table_data]:
                     row = df[df['tabela'] == word]
-                    classe = row['foreign_table'].values[0]  # Nome da coluna da classe
-                    tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
-                    code = row['code'].values[0]
-                    table_data.append((word, score, code, classe, tipo_geometria))
+                    if not row.empty:
+                        classe = row['foreign_table'].values[0]  # Nome da coluna da classe
+                        tipo_geometria = row['tipo_geometria'].values[0]  # Nome da coluna do tipo de geometria
+                        code = row['code'].values[0]
+                        table_data.append((word, score, code, classe, tipo_geometria))
 
             # Fechar o diálogo após a busca
             dialog.accept()
 
             # Exibir os resultados na tabela
-            show_table(table_data)
+            show_table(table_data, especificacao_tecnica)
 
     # Conectar o botão à função de busca
     search_button.clicked.connect(on_search)
