@@ -45,6 +45,10 @@ def run():
             layout.addWidget(self.combo_escala)
 
             # --- CHECKBOXES ---
+            self.check_visivel_null = QCheckBox("Resetar atributo visivel para null")
+            self.check_visivel_null.setChecked(False)   # valor padrão
+            layout.addWidget(self.check_visivel_null)
+
             self.check_priorizar = QCheckBox("Priorizar visibilidade das camadas com nome")
             self.check_priorizar.setChecked(True)   # valor padrão
             layout.addWidget(self.check_priorizar)
@@ -102,15 +106,52 @@ def run():
     escala = dlg.combo_escala.currentText()
     priorizar_visibilidade_camadas_com_nome = dlg.check_priorizar.isChecked()
     remover_camadas_temporarias = dlg.check_remover_temp.isChecked()
+    resetar_visibilidade = dlg.check_visivel_null.isChecked()
     #variavel valor do lado do quadrado da edificacao
-    switch_valor_lado = { "25k": 11.0, "50k": 22.0, "100k": 44.0, "250k": 88.0 }
-    valor_lado = 0
-    if(switch_valor_lado[escala]):
-        valor_lado = switch_valor_lado[escala]
+    switch_valor_raio = { "25k": 17.5, "50k": 35.0, "100k": 70.0, "250k": 175.0 }
+    raio = 0
+    if(switch_valor_raio[escala]):
+        raio = switch_valor_raio[escala]
     else:
         QMessageBox.information(None, "Cancelado", "Escala não definida.")
         return
         #raise Exception("Escala não definida.")
+    
+    #Deixar campo visivel null
+    def campo_visivel_null():
+        layer_name = camada_referencia
+        field_name = "visivel"
+
+        # Obter camada
+        layer = QgsProject.instance().mapLayersByName(layer_name)
+        if not layer:
+            raise Exception(f"Camada '{layer_name}' não encontrada.")
+        layer = layer[0]
+
+        # Verifica se o campo existe
+        if field_name not in [f.name() for f in layer.fields()]:
+            raise Exception(f"O campo '{field_name}' não existe na camada.")
+
+        # Começar edição
+        if not layer.isEditable():
+            layer.startEditing()
+
+        # Se houver seleção, usa apenas selecionadas. Caso contrário, todas.
+        features = (
+            layer.selectedFeatures() 
+            if layer.selectedFeatureCount() > 0 
+            else layer.getFeatures()
+        )
+
+        # Atualizar cada feição
+        for feat in features:
+            fid = feat.id()
+            layer.changeAttributeValue(fid, layer.fields().indexFromName(field_name), None)
+
+        # Salvar
+        layer.commitChanges()
+
+        print("Campo atualizado para NULL com sucesso!")
 
 
     from qgis.core import (
@@ -127,7 +168,7 @@ def run():
     # =========================================================
     # 1️⃣ GERAR BUFFERS QUADRADOS ROTACIONADOS
     # =========================================================
-    def gerar_buffers_quadrados_rotacionados(layer_name='constr_edificacao_p', lado=22.0, acrescimo_rot=90.0):
+    def gerar_buffers_quadrados_rotacionados(layer_name='constr_edificacao_p', half=35.0, acrescimo_rot=90.0):
         layer_list = QgsProject.instance().mapLayersByName(layer_name)
         if not layer_list:
             QMessageBox.critical(None, "Erro", f"Camada '{layer_name}' não encontrada.")
@@ -158,7 +199,6 @@ def run():
             prov.addAttributes([QgsField('id_ilha', QVariant.Int)])
             out_layer.updateFields()
 
-        half = lado / 2.0
         features_out = []
 
         for f in layer.getFeatures():
@@ -684,14 +724,20 @@ def run():
     from qgis.core import Qgis
 
     # cria barra
-    total_barra = 27
+    total_barra = 28
 
     dlg.iniciar_barra(total_barra)
     # Exibir barra no messageBar do QGIS (opcional)
+
+    #Reseta visibilidade se necessario
+    if(resetar_visibilidade):
+        campo_visivel_null()
+    dlg.barra.setValue(1)
+    QCoreApplication.processEvents()
         
     # 1️⃣ Cria os buffers quadrados
-    layer_buff = gerar_buffers_quadrados_rotacionados(camada_referencia, valor_lado)
-    dlg.barra.setValue(1)
+    layer_buff = gerar_buffers_quadrados_rotacionados(camada_referencia, raio)
+    dlg.barra.setValue(2)
     QCoreApplication.processEvents()
 
     #definir visualização prioridade com feições com nome
