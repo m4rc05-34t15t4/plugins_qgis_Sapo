@@ -2,6 +2,14 @@ def run():
 
     import os
     import sys
+
+    # Caminho da pasta de libs dentro do plugin
+    plugin_dir = os.path.dirname(__file__)
+    sys.path.append(os.path.join(plugin_dir))
+    libs_path = os.path.join(plugin_dir, "libs")
+    if libs_path not in sys.path:
+        sys.path.insert(0, libs_path)
+    
     import pandas as pd
     from fuzzywuzzy import process #from rapidfuzz import process
     from qgis.core import QgsProject, QgsVectorLayer, QgsWkbTypes, QgsDefaultValue
@@ -11,12 +19,7 @@ def run():
     from qgis.PyQt.QtCore import Qt, QSize
     from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QDialog, QVBoxLayout, QComboBox, QStyleFactory
 
-    # Caminho da pasta de libs dentro do plugin
-    plugin_dir = os.path.dirname(__file__)
-    sys.path.append(os.path.join(plugin_dir))
-    libs_path = os.path.join(plugin_dir, "libs")
-    if libs_path not in sys.path:
-        sys.path.insert(0, libs_path)
+    
 
     #Retornar nomes csv
     def listar_csv_lista_classes(plugin_dir):
